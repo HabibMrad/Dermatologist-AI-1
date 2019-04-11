@@ -27,4 +27,4 @@ rm train.zip
 rm valid.zip
 rm test.zip
 ```
-Congrats. Now the dataset if ready to work on it
+Congrats. Now the dataset is ready.
