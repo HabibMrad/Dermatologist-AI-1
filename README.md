@@ -1,6 +1,5 @@
 # Dermatologist-AI
-- This project was a [task](https://github.com/udacity/dermatologist-ai) on  my [Deep Learning Nanodegree](https://www.udacity.com/course/deep-learning-nanodegree--nd101)
-- The model is trained and tested it on google colab 
+- This project was a [task](https://github.com/udacity/dermatologist-ai) on  my [Deep Learning Nanodegree](https://www.udacity.com/course/deep-learning-nanodegree--nd101). The model was trained and tested  on google colab.
 ## Dataset Downloading
 - First, make a directory for the project. So open the terminal
 ```shell
@@ -16,7 +15,7 @@ wget https://s3-us-west-1.amazonaws.com/udacity-dlnfd/datasets/skin-cancer/train
 wget https://s3-us-west-1.amazonaws.com/udacity-dlnfd/datasets/skin-cancer/valid.zip
 wget https://s3-us-west-1.amazonaws.com/udacity-dlnfd/datasets/skin-cancer/test.zip
 ```
-- extract the zip files to its folders
+- Extract the zip files to its folders
 ```shell
 unzip train.zip
 unzip test.zip
