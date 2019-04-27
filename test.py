@@ -13,9 +13,7 @@ import csv
 import itertools
 import matplotlib.pyplot as plt
 import pandas as pd
-import importlib
-importlib.import_module(train)
-
+from train import*
 
 
 def plot_roc_auc(y_true, y_pred):
@@ -92,7 +90,7 @@ def plot_confusion_matrix(y_true, y_pred, thresh, classes):
 
 
 
-
+checkpoint_filepath = 'weights.hdf5'
 my_model.load_weights(checkpoint_filepath)
 # Create predictions.csv to store our prediction in it
 my_predictions = [my_model.predict(np.expand_dims(feature, axis=0)) for feature in test_data]
