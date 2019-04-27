@@ -1,3 +1,8 @@
+"""
+Created on Sat Apr 27 19:10:40 2019
+
+@author: Gabir N. Yusuf
+"""
 from sklearn.datasets import load_files   
 from keras.utils import np_utils  
 import numpy as np
@@ -11,7 +16,8 @@ from keras.applications.inception_resnet_v2 import InceptionResNetV2
 from keras.layers import Conv2D, Dropout, Flatten, Dense, MaxPooling2D, GlobalAveragePooling2D
 from keras.models import Sequential
 from keras.callbacks import ModelCheckpoint
-import data*
+import importlib
+importlib.import_module(data)
 
 # Transfere Learning section
 # preprocess_input method is imported above from keras.applications.inception_resnet_v2
