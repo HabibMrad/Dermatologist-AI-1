@@ -1,3 +1,8 @@
+"""
+Created on Sat Apr 27 19:10:40 2019
+
+@author: Gabir N. Yusuf
+"""
 from sklearn.datasets import load_files   
 from keras.utils import np_utils  
 import numpy as np
