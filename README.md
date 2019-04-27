@@ -1,3 +1,6 @@
+[image1]: ./images/ROC_Curve.PNG "ROC Curve"
+[image2]: ./images/Confusion_Matrix.PNG "CelebA Output"
+
 # Dermatologist-AI
 - This project was a [task](https://github.com/udacity/dermatologist-ai) on my [Deep Learning Nanodegree](https://www.udacity.com/course/deep-learning-nanodegree--nd101). The model was trained and tested on google colab.
 ## Dataset Downloading
@@ -45,8 +48,7 @@ Category 1 Score: 0.772
 Category 2 Score: 0.880
 Category 3 Score: 0.826
 ```
-[image1]: .ROC_Curve.PNG "ROC Curve"
-[image2]: .Confusion_Matrix.PNG "Confusion Matrix"
+
 
 ### Results:
 
