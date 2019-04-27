@@ -1,3 +1,9 @@
+"""
+Created on Sat Apr 27 19:10:40 2019
+
+@author: Gabir N. Yusuf
+"""
+
 from sklearn.metrics import roc_curve, auc, confusion_matrix
 from keras.preprocessing.image import ImageDataGenerator
 import numpy as np
@@ -7,8 +13,10 @@ import csv
 import itertools
 import matplotlib.pyplot as plt
 import pandas as pd
-import data*
-import train*
+import importlib
+importlib.import_module(train)
+
+
 
 def plot_roc_auc(y_true, y_pred):
     """
