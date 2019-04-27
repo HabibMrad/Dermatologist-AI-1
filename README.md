@@ -38,11 +38,22 @@ python train.py
 ```shell
 python test.py
 ```
+# Results:
 - **Accuracy**
 ```
 Category 1 Score: 0.772
 Category 2 Score: 0.880
 Category 3 Score: 0.826
 ```
-- **ROC Curve**
+[image1]: .ROC_Curve.PNG "ROC Curve"
+[image2]: .Confusion_Matrix.PNG "Confusion Matrix"
+
+### Results:
+
+
+ROC Curve                  |Confusion Matrix        
+:-------------------------:|:-------------------------:
+![ROC Curve][image1]       |![Confusion Matrix][image2]    
+
+
 
