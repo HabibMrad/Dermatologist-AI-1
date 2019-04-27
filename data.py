@@ -14,43 +14,6 @@ import matplotlib.pyplot as plt
 from keras.preprocessing.image import ImageDataGenerator
 
 
-
-train_files, train_targets = load_dataset('train')
-valid_files, valid_targets = load_dataset('valid')
-test_files, test_targets = load_dataset('test', shuffle=False)
-
-# load lables
-label_name = [item[6:-1] for item in sorted(glob("train/*/"))]
-
-# Loading images in tensors
-train_tensors = paths_to_tensor(tqdm(train_files))
-valid_tensors = paths_to_tensor(tqdm(valid_files))
-test_tensors = paths_to_tensor(tqdm(test_files))
-
-# Data Augmentation
-train_tensors, train_targets = augmentation(train_tensors, train_targets, aug=False)
-
-def augmentation(train_tensors, train_targets, aug=False):
-	apply_train_image_transform = aug 
-	# I Can't do data augmentation on colab because the RAM crashed after using all variable 
-	# and you will need to run the previous cells again(take long time ) 
-	if apply_train_image_transform:
-	    # Caution: Doesn't guarantee prevention of duplication.
-	    datagen_train = ImageDataGenerator(
-	        horizontal_flip=True,
-	        vertical_flip=True)
-	    
-	    datagen_train.fit(train_tensors)
-	    shape = (train_tensors.shape[0] * 2,) + train_tensors.shape[1:]
-	    generated = np.ndarray(shape=shape)
-	    for i, image in tqdm(enumerate(train_tensors)):
-	        generated[i] = datagen_train.random_transform(image)
-	    
-	    train_tensors = np.concatenate((train_tensors, generated))
-	    train_targets = train_targets.repeat(2, axis=0)
-	    return train_tensors, train_targets
-
-
 def load_dataset(data_path, shuffle=None):
     kwargs = {}
     if shuffle != None:
@@ -71,3 +34,21 @@ def path_to_tensor(img_path):
 
 def paths_to_tensor(image_paths):
     return np.vstack([path_to_tensor(path) for path in image_paths])
+
+
+
+train_files, train_targets = load_dataset('train')
+valid_files, valid_targets = load_dataset('valid')
+test_files, test_targets = load_dataset('test', shuffle=False)
+
+# load lables
+label_name = [item[6:-1] for item in sorted(glob("train/*/"))]
+
+# Loading images in tensors
+print('\nLoading training files into train_tensors ... ')
+train_tensors = paths_to_tensor(tqdm(train_files))
+print('\nLoading Validation files into  valid_tensors ... ')
+valid_tensors = paths_to_tensor(tqdm(valid_files))
+print('\nLoading Test files into test_tensors ... ')
+test_tensors = paths_to_tensor(tqdm(test_files))
+
