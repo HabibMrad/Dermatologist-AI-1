@@ -1,13 +1,14 @@
 # Dermatologist-AI
-- This project was a [task](https://github.com/udacity/dermatologist-ai) on  my [Deep Learning Nanodegree](https://www.udacity.com/course/deep-learning-nanodegree--nd101). The model was trained and tested  on google colab.
+- This project was a [task](https://github.com/udacity/dermatologist-ai) on my [Deep Learning Nanodegree](https://www.udacity.com/course/deep-learning-nanodegree--nd101). The model was trained and tested on google colab.
 ## Dataset Downloading
-- First, make a directory for the project. So open the terminal
+- First, Clone the repo to your machine. So open the terminal
 ```shell
-mkdir dermatologist-ai
-cd dermatologist-ai
-mkdir data 
-cd data
-mkdir train; mkdir valid; mkdir test
+!git clone https://github.com/gabir-yusuf/Dermatologist-AI
+```
+- Change directory to the project files:
+```shell
+%cd Dermatologist-AI/
+!mkdir train; mkdir valid; mkdir test
 ```
 - Download the dataset at `dermatologist-ai/data/` using GNU Wget software package for retrieving files using HTTPS protocol.
 ```shell
@@ -28,3 +29,20 @@ rm valid.zip
 rm test.zip
 ```
 Congrats. Now the dataset is ready.
+
+- Now to train the model make sure you are in the project directory, then in the terminal write:
+```shell
+python train.py
+```
+- To train and test the model in one line write in the terminal:
+```shell
+python test.py
+```
+- **Accuracy**
+```
+Category 1 Score: 0.772
+Category 2 Score: 0.880
+Category 3 Score: 0.826
+```
+- **ROC Curve**
+
